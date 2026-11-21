@@ -35,10 +35,10 @@ const ProductCard = () => {
                 <Oval
                     height={80}
                     width={80}
-                    color="#4fa94d"
+                    color="#A855F7"
                     visible={true}
                     ariaLabel="oval-loading"
-                    secondaryColor="#4fa94d"
+                    secondaryColor="#A855F7"
                     strokeWidth={2}
                     strokeWidthSecondary={2}
                 />
