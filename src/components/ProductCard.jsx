@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios"
 import { Oval } from 'react-loader-spinner'
 import './ProductCard.css'
+import { ShoppingCart } from 'lucide-react'
 
 const ProductCard = () => {
     const [products, setProducts] = useState([])
@@ -47,7 +48,7 @@ const ProductCard = () => {
 
     return (
         <div className="container d-flex  flex-column gap-4">
-            <h1 className='text-center pt-4'>Our products</h1>
+            <h1 className='text-center pt-4 headingText'>Our <span className='gradientText'>products</span></h1>
 
             <div className="row cardCon">
                 {
@@ -56,9 +57,15 @@ const ProductCard = () => {
                             <section className="card cards" style={{ maxWidth: "320px" }}>
                                 <img src={thumbnail} className="card-img-top" alt={title}/>
                                     <div className="card-body">
-                                        <h4 className="card-title text-center">{title}</h4>
-                                        <p className="card-text text-center">{description}</p>
-                                        <h4>${price}</h4>
+                                        <h4 className="card-title text-center cardHeading">{title}</h4>
+                                        <p className="card-text text-center cardText">{description}</p>
+                                        <div className='d-flex'>
+                                            <h4 className='cardprice'>${price}</h4>
+                                        <button className='ms-auto cardBtn'>
+                                            Add to cart
+                                            <ShoppingCart size={18} />
+                                            </button>
+                                        </div>
                                     </div>
                             </section>
                         )

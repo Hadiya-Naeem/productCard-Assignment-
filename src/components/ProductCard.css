@@ -1,5 +1,75 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+  --bg-color: #0D0B12;
+  --card-color: #1A1325;
+  --accent-color: #8B5CF6;
+  --accent-hover: #A855F7;
+  --text-color: #F5F0FF;
+  --secondary-text: #B8AFC5;
+  --border-color: #352747;
+}
+
 .cardCon{
    display: flex;
    justify-content: center;
    gap: 40px;
+}
+.cards{
+       display: flex;
+    flex-direction: column;
+    height: 100% !important;
+     position: relative !important;
+   background-color: #0D0B12 !important;
+   background-image:
+        radial-gradient(
+            ellipse at top left,
+            rgba(139, 92, 246, 0.20),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            rgba(168, 85, 247, 0.18),
+            transparent 40%
+        );
+    background-attachment: fixed;
+    border: 1px solid var(--border-color) !important;
+}
+
+.gradientText {
+    background: linear-gradient(
+        90deg,
+        #F5F0FF,
+        #A855F7,
+        #A855F7
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.headingText{
+   color: var(--text-color);
+}
+.cardHeading{
+   color: var(--text-color) !important;
+}
+.cardText{
+   color: var(--secondary-text);
+}
+.cardprice{
+   color:var(--accent-hover);
+}
+.cardBtn{
+   background: transparent;
+   outline: none;
+   border: 1px solid var(--accent-hover);
+   border-radius: 30px;
+   color: var(--accent-hover);
+   padding: 0px 10px;
+   font-size: small;
 }
